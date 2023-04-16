@@ -11,6 +11,13 @@ that copies the project to user specified path and set it's name. For more infor
 We encourage the users to use the example as a template for the new projects.
 A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
 
+## Specifications
+- Hysteresis and maximum temperature start at 0 and the user must set both values.
+- When defining the maximum temperature and hysteriasis by commands, make sure that the first one is higher.
+- The waiting time to compile the temperature change using the buttons is 5 seconds.
+- If the hysteresis exceeds the maximum temperature when it is modified with the buttons, both values will be equal.
+
+
 ## Example folder contents
 
 The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
